@@ -73,7 +73,7 @@ Command (m for help): m
 
 * lsblk - to get the partions under each device
 
-### To store data into the new partition, need to tell the OS abt how the data is to be written into or to be read. Filesystem helps us to achieve this
+### To store data into the new partition, need to tell the OS abt how the data is to be written into or to be read. File systems helps us to achieve this
 #### _mainly there 2 types of filesystems in linux_ : can use the one in the server
 * xfs
 * ext4
