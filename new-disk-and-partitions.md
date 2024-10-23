@@ -66,7 +66,34 @@ Command (m for help): m
 | s | create a new empty Sun partition table |
 
 
-### After creating the partitions in new disk, inform the OS about the changes
+### After creating the partitions in new disk, inform the OS about the changes to re-read the partition table
     partprode <device name>
 
 > eg: partprobe /dev/sdb
+
+* lsblk - to get the partions under each device
+
+### To store data into the new partition, need to tell the os abt how the data is to be written into or to be read. Filesystem helps us to achieve this
+#### _in general there 2 types of filesystems in linux_ : can use any one of them
+* xfs
+* ext4
+> To get the list of file systems
+```
+df -T
+```
+
+> 'mkfs' ---> command to assign a partition to a particular file system
+
+```
+mkfs.xfs <partition name>
+    
+or
+
+mkfs -t xfs <partition name>
+```
+```
+mkfs.ext4 <partition name>
+
+or
+
+mkfs -t ext4 <partition name>
